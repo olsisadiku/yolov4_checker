@@ -18,7 +18,7 @@ models:
             - Func/StatefulPartitionedCall/output/_543
     datasets:
       - name: ms_coco_detection_80_class_without_background
-        subsample_size: 5000
+        subsample_size: 500
         preprocessing:
           - type: resize
             size: 608
@@ -40,11 +40,11 @@ models:
             reference: 0.7123
           - name: AP@0.5
             type: coco_precision
-            max_detections: 5000
+            max_detections: 500
             threshold: 0.5
             reference: 0.774
           - name: AP@0.5:0.05:95
             type: coco_precision
-            max_detections: 5000
+            max_detections: 500
             threshold: '0.5:0.05:0.95'
             reference: 0.5026
